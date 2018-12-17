@@ -1,0 +1,15 @@
+{
+  "name": "vuessrworkshop",
+  "version": "1.0.0",
+  "description": "A workshop to learn Vue SSR",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ."
+  },
+  "keywords": [
+    "Vue",
+    "JavaScript"
+  ],
+  "author": "Dan Gautsch",
+  "license": "MIT"
+}
