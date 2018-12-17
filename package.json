@@ -11,5 +11,13 @@
     "JavaScript"
   ],
   "author": "Dan Gautsch",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.16.4",
+    "vue": "2.5.17",
+    "vue-router": "3.0.2",
+    "vue-server-renderer": "2.5.17",
+    "vue-ssr-build": "github:brophdawg11/vue-ssr-build#1.2.0",
+    "vuex": "3.0.1"
+  }
 }
