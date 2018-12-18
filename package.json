@@ -4,7 +4,9 @@
   "description": "A workshop to learn Vue SSR",
   "main": "index.js",
   "scripts": {
-    "test": "jest ."
+    "start": "node ./src/server",
+    "debug": "node --inspect-brk ./src/server",
+    "test": "jest"
   },
   "keywords": [
     "Vue",
