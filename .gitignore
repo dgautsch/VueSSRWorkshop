@@ -79,4 +79,4 @@ typings/
 .dynamodb/
 
 # VueSSR
-.dist/
+dist
