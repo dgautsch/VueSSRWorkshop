@@ -1,5 +1,5 @@
 import initializeServer from 'vue-ssr-build/src/entry-server';
-import createApp from './app';
+import createApp from '../js/app';
 
 export default initializeServer(createApp, {
     // Wire up logic for route-level vuex modules?

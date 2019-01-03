@@ -4,8 +4,13 @@
   "description": "A workshop to learn Vue SSR",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/server",
-    "debug": "node --inspect-brk ./src/server",
+    "start": "NODE_ENV=production npm run build && node ./src/server",
+    "build": "npm run build:client -- --progress && npm run build:server -- --progress",
+    "build:client": "webpack --config build/webpack.client.config.js --hide-modules",
+    "build:server": "webpack --config build/webpack.server.config.js --hide-modules",
+    "dev": "node ./src/server",
+    "local": "NODE_ENV=local node ./src/server",
+    "debug": "NODE_ENV=local node --inspect-brk ./src/server",
     "test": "jest"
   },
   "keywords": [
@@ -15,6 +20,7 @@
   "author": "Dan Gautsch",
   "license": "MIT",
   "dependencies": {
+    "copy-webpack-plugin": "4.6.0",
     "express": "4.16.4",
     "vue": "2.5.17",
     "vue-router": "3.0.2",

@@ -5,7 +5,7 @@ initializeClient(createApp, {
     // selector for where to mount the app
     appSelector: '#app',
     // Include HMR support?
-    hmr: true,
+    hmr: process.env.NODE_ENV === 'local',
     // Any existing initial vuex state, otherwise
     initialState: null,
     // Name of the meta tag where state is stringified
