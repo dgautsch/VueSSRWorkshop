@@ -8,7 +8,7 @@ module.exports = {
     extractCss: false,    // Used to extract CSS files during production builds
     enablePostCss: false, // Enable postcss-loader
     postCssOpts: null,    // options for postcss-loader
-    i18nBlocks: false,    // Boolean - include support for <i18n> blocks
+    i18nBlocks: true,    // Boolean - include support for <i18n> blocks
                           // in components
     theme: null,          // Theme for vue-themed-style-loader
     sassLoaderData: null, // Data to pass to sass-loader

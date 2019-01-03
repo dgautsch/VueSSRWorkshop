@@ -11,7 +11,6 @@ const appTemplate = 'src/index.tpl.html';
 
 // Static asset routes, only for local and dev environments
 const staticPath = path.resolve(rootDir, 'dist');
-console.log(staticPath);
 app.use('/static/', express.static(staticPath));
 
 const getRenderer = (expressApp, name, templatePath) => vueRenderer(expressApp, {
@@ -24,7 +23,7 @@ const getRenderer = (expressApp, name, templatePath) => vueRenderer(expressApp, 
     // Enable HMR?
     hmr: isLocal,
     name,
-    stream: false,
+    stream: true,
     // Additional options to pass to createBundleRenderer
     rendererOpts: null,
     // The remaining must be specified as absolute paths:

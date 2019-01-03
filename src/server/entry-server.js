@@ -8,5 +8,5 @@ export default initializeServer(createApp, {
     // i18n translations to be included
     i18nLoader: null,
     // Logger instance
-    logger: console
+    logger: console,
 });
