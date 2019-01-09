@@ -1,6 +1,6 @@
 <template>
     <div id="cat-facts">
-        <h1>Cat Facts</h1>
+        <h2>Cat Facts</h2>
         <!-- Output your list of cat facts here -->
     </div>
 </template>
