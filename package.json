@@ -21,6 +21,7 @@
   "author": "Dan Gautsch",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.18.0",
     "copy-webpack-plugin": "4.6.0",
     "eslint-plugin-testcafe": "0.2.1",
     "express": "4.16.4",

@@ -6,10 +6,8 @@ initializeClient(createApp, {
     appSelector: '#app',
     // Include HMR support?
     hmr: process.env.NODE_ENV === 'local',
-    // Any existing initial vuex state, otherwise
-    initialState: null,
     // Name of the meta tag where state is stringified
-    initialStateMetaTag: null,
+    initialStateMetaTag: 'initial-state',
     // Wire up logic for route-level vuex modules?
     vuexModules: true,
     // Logger instance

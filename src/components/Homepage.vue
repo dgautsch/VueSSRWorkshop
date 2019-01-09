@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="col-12">
         <h2>{{ hello }}</h2>
     </div>
 </template>

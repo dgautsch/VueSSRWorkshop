@@ -2,8 +2,10 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 import VueI18n from 'vue-i18n';
-import App from '../components/App.vue';
-import Homepage from '../components/Homepage.vue';
+import CreateStore from '@js/store';
+import App from '@components/App.vue';
+import Cats from '@components/Cats.vue';
+import Homepage from '@components/Homepage.vue';
 
 Vue.use(VueRouter);
 Vue.use(VueI18n);
@@ -13,6 +15,11 @@ const routes = [{
     path: '/',
     name: 'Homepage',
     component: Homepage,
+},
+{
+    path: '/cats',
+    name: 'Cats',
+    component: Cats,
 }];
 
 const messages = {
@@ -39,11 +46,7 @@ export default function createApp() {
         // Add a new route for the data page
     });
 
-    const store = new Vuex.Store({
-        state: {},
-        mutations: {},
-        actions: {},
-    });
+    const store = CreateStore();
 
     const app = new Vue({
         i18n,
