@@ -1,6 +1,7 @@
 const merge = require('webpack-merge');
 const getClientConfig = require('vue-ssr-build/build/webpack.client.config');
 const sharedConfig = require('./config');
+
 const mergedConfig = Object.assign({}, {
     type: 'client',
 }, sharedConfig);

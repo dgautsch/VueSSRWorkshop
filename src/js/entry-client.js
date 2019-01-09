@@ -9,9 +9,9 @@ initializeClient(createApp, {
     // Any existing initial vuex state, otherwise
     initialState: null,
     // Name of the meta tag where state is stringified
-    initialStateMetaTag: 'initial-state',
+    initialStateMetaTag: null,
     // Wire up logic for route-level vuex modules?
     vuexModules: true,
     // Logger instance
-    logger: console
+    logger: console,
 });

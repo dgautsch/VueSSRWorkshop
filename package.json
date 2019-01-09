@@ -4,13 +4,14 @@
   "description": "A workshop to learn Vue SSR",
   "main": "index.js",
   "scripts": {
-    "start": "npm run clean && NODE_ENV=production npm run build && node ./src/server",
     "build": "npm run build:client -- --progress && npm run build:server -- --progress",
     "build:client": "webpack --config build/webpack.client.config.js --hide-modules",
     "build:server": "webpack --config build/webpack.server.config.js --hide-modules",
     "clean": "rm -rf dist",
     "dev": "npm run clean && NODE_ENV=local node ./src/server",
     "debug": "npm run clean && NODE_ENV=local node --inspect-brk ./src/server",
+    "lint": "eslint .",
+    "start": "npm run clean && NODE_ENV=production npm run build && node ./src/server",
     "test": "jest"
   },
   "keywords": [
@@ -23,10 +24,14 @@
     "copy-webpack-plugin": "4.6.0",
     "express": "4.16.4",
     "vue": "2.5.17",
-    "vue-i18n": "^8.7.0",
+    "vue-i18n": "8.7.0",
     "vue-router": "3.0.2",
     "vue-server-renderer": "2.5.17",
     "vue-ssr-build": "github:brophdawg11/vue-ssr-build#1.2.0",
-    "vuex": "3.0.1"
+    "vuex": "3.0.1",
+    "webpack-merge": "4.2.1"
+  },
+  "devDependencies": {
+    "eslint": "5.12.0"
   }
 }

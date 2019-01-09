@@ -27,15 +27,16 @@ const getRenderer = (expressApp, name, templatePath) => vueRenderer(expressApp, 
     // Additional options to pass to createBundleRenderer
     rendererOpts: null,
     // The remaining must be specified as absolute paths:
-    templatePath:   path.join(rootDir, templatePath),
-    clientConfig:   path.join(rootDir, 'build/webpack.client.config.js'),
-    serverConfig:   path.join(rootDir, 'build/webpack.server.config.js'),
+    templatePath: path.join(rootDir, templatePath),
+    clientConfig: path.join(rootDir, 'build/webpack.client.config.js'),
+    serverConfig: path.join(rootDir, 'build/webpack.server.config.js'),
     clientManifest: path.join(rootDir, 'dist/vue-ssr-client-manifest.json'),
-    serverBundle:   path.join(rootDir, 'dist/vue-ssr-server-bundle.json'),
+    serverBundle: path.join(rootDir, 'dist/vue-ssr-server-bundle.json'),
 });
 
 app.get('*', getRenderer(app, 'default', appTemplate));
 
 const server = app.listen(3000, () => {
+    // eslint-disable no-console
     console.info(`Server listening at http://localhost:${server.address().port}/`);
 });
