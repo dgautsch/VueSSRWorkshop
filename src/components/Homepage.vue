@@ -1,5 +1,5 @@
 <template>
-    <div class="col-12">
+    <div id="home" class="col-8">
         <h2>{{ hello }}</h2>
     </div>
 </template>
@@ -14,10 +14,3 @@ export default {
     },
 };
 </script>
-
-<style lang="scss">
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #000;
-}
-</style>

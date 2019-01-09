@@ -6,10 +6,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-8">
-                <!-- route outlet -->
-                <router-view />
-            </div>
+            <!-- route outlet -->
+            <router-view :key="$route.path" />
             <div class="col-4">
                 <h2>Navigation</h2>
                 <ul>
