@@ -32,7 +32,7 @@ const messages = {
 
 // export a factory function for creating fresh app, router and store
 // instances
-export default function createApp() {
+export default function createApp({ initialState }) {
 
     const i18n = new VueI18n({
         locale: 'en', // set locale
@@ -47,6 +47,10 @@ export default function createApp() {
     });
 
     const store = CreateStore();
+
+    if (initialState) {
+        store.replaceState(initialState);
+    }
 
     const app = new Vue({
         i18n,
