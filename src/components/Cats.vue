@@ -1,30 +1,25 @@
 <template>
     <div id="cats" class="col-8">
-        <button type="button" @click="getCats">Get More Cats!</button>
-        <p v-for="(cat, idx) in cats" :key="idx">
-            <img :src="cat" class="cat-image">
-        </p>
+        <button type="button">Get More Cats!</button>
+        <!-- Output your cat pictures here -->
+        <!-- <p v-for="(cat, idx) in cats" :key="idx"> -->
+        <!-- <img :src="cat" class="cat-image"> -->
+        <!-- </p> -->
     </div>
 </template>
 
 <script>
-import { GET_CATS } from '@js/store';
 
 export default {
     name: 'Cats',
-    fetchData({ store }) {
-        return store.dispatch(GET_CATS)
-            .catch(() => {});
+    fetchData() {
+        // @todo dispatch an action to get the cats server-side
     },
     computed: {
-        cats() {
-            return this.$store.getters.getCats;
-        },
+        // @todo create a computed proprety that calls the getter for cats
     },
     methods: {
-        getCats() {
-            this.$store.dispatch(GET_CATS);
-        },
+        // @todo write a method that dispatches an action to get the cats
     },
 };
 </script>
@@ -33,6 +28,5 @@ export default {
 .cat-image {
     max-width: 300px;
     width: 100%;
-    background: blue;
 }
 </style>

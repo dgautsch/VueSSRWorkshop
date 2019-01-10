@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 import Vuex from 'vuex';
 
 // mutations
@@ -14,21 +14,16 @@ export default function () {
             cats: [],
         },
         mutations: {
-            [SET_CATS](state, { data }) {
-                state.cats.push(data.file);
-            },
+            // @todo Use the SET_CATS mutation to set the values from the GET_CATS
+            // action and update the store.
         },
         actions: {
-            async [GET_CATS]({ commit }) {
-                const url = 'https://aws.random.cat/meow';
-                const CATS = await axios.get(url, { crossdomain: true });
-                return commit(SET_CATS, CATS);
-            },
+            // @todo Create a GET_CATS action that calls https://aws.random.cat/meow
+            // and then commits the response to the store.
+            // Use axios for your HTTP calls, it is commented out above.
         },
         getters: {
-            getCats(state) {
-                return state.cats;
-            },
+            // @todo write a getter that gets all the cats in the store
         },
     });
 }
